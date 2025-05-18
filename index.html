@@ -1,205 +1,239 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Элегантный Сайт</title>
-	<style>
-		/* Базовые стили */
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-
-		body {
-			font-family: 'Arial', sans-serif;
-			background-color: #f9f9f9;
-			color: #2d3436;
-			min-height: 100vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			line-height: 1.6;
-		}
-
-		.container {
-			width: 100%;
-			max-width: 1200px;
-			padding: 2rem;
-			text-align: center;
-		}
-
-		/* Заголовки */
-		.centered-header {
-			margin-bottom: 3rem;
-		}
-
-		.title {
-			font-size: 3.5rem;
-			font-weight: 700;
-			margin-bottom: 1rem;
-		}
-
-		.title span {
-			color: #6c5ce7;
-			position: relative;
-		}
-
-		.title span::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 3px;
-			background: #6c5ce7;
-		}
-
-		.subtitle {
-			font-size: 1.2rem;
-			opacity: 0.8;
-			max-width: 600px;
-			margin: 0 auto;
-		}
-
-		/* Навигация */
-		.centered-nav {
-			display: flex;
-			justify-content: center;
-			gap: 2rem;
-			margin-bottom: 3rem;
-		}
-
-		.nav-link {
-			color: #2d3436;
-			text-decoration: none;
-			font-size: 1.1rem;
-			position: relative;
-			padding: 0.5rem 0;
-		}
-
-		.nav-link::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 0;
-			height: 2px;
-			background: #6c5ce7;
-			transition: width 0.4s ease;
-		}
-
-		.nav-link:hover::after {
-			width: 100%;
-		}
-
-		/* Социальные иконки */
-		.social-links {
-			display: flex;
-			justify-content: center;
-			gap: 1.5rem;
-		}
-
-		.social-icon {
-			color: #2d3436;
-			font-size: 1.5rem;
-			transition: all 0.3s ease;
-			opacity: 0.7;
-			text-decoration: none;
-		}
-
-		.social-icon:hover {
-			color: #6c5ce7;
-			opacity: 1;
-			transform: translateY(-3px);
-		}
-
-		/* Адаптивность */
-		@media (max-width: 768px) {
-			.title {
-				font-size: 2.5rem;
-			}
-
-			.centered-nav {
-				flex-direction: column;
-				gap: 1rem;
-			}
-
-			.subtitle {
-				font-size: 1rem;
-			}
-		}
-
-		/* Анимации */
-		@keyframes fadeIn {
-			from {
-				opacity: 0;
-				transform: translateY(20px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
-
-		.title,
-		.subtitle,
-		.nav-link,
-		.social-icon {
-			animation: fadeIn 1s ease-out forwards;
-		}
-
-		.nav-link:nth-child(1) {
-			animation-delay: 0.2s;
-		}
-
-		.nav-link:nth-child(2) {
-			animation-delay: 0.4s;
-		}
-
-		.nav-link:nth-child(3) {
-			animation-delay: 0.6s;
-		}
-
-		.social-icon:nth-child(1) {
-			animation-delay: 0.8s;
-		}
-
-		.social-icon:nth-child(2) {
-			animation-delay: 1.0s;
-		}
-
-		.social-icon:nth-child(3) {
-			animation-delay: 1.2s;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Дизайнера</title>
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #2d3436;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* Навигация */
+        nav {
+            margin: 2rem 0;
+        }
+        
+        .nav-link {
+            color: #2d3436;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 0 1rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #6c5ce7;
+            transition: width 0.4s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Заголовки */
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 2rem 0;
+        }
+        
+        .title span {
+            color: #6c5ce7;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        /* Главная страница */
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+        
+        /* Страница работ */
+        #works {
+            display: none;
+            padding: 4rem 0;
+        }
+        
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .work-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .work-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .work-info {
+            padding: 1.5rem;
+        }
+        
+        .work-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .work-desc {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-
 <body>
-	<div class="container">
-		<!-- Главный контент -->
-		<header class="centered-header">
-			<h1 class="title">Привет, я <span>Дизайнер</span></h1>
-			<p class="subtitle">Создаю элегантные цифровые продукты</p>
-		</header>
-
-		<!-- Навигация -->
-		<nav class="centered-nav">
-			<a href="#about" class="nav-link">Обо мне</a>
-			<a href="#work" class="nav-link">Работы</a>
-			<a href="#contact" class="nav-link">Контакты</a>
-		</nav>
-
-		<!-- Социальные иконки -->
-		<div class="social-links">
-			<a href="#" class="social-icon">Be</a> <!-- Behance -->
-			<a href="#" class="social-icon">D</a> <!-- Dribbble -->
-			<a href="#" class="social-icon">In</a> <!-- Instagram -->
-		</div>
-	</div>
+    <!-- Главная страница -->
+    <div id="home" class="container">
+        <h1 class="title animated">Привет, я <span>Дизайнер</span></h1>
+        <p class="subtitle animated">Создаю элегантные цифровые продукты</p>
+        
+        <nav>
+            <a href="#" class="nav-link animated" onclick="showPage('home')">Главная</a>
+            <a href="#" class="nav-link animated" onclick="showPage('works')">Работы</a>
+        </nav>
+    </div>
+    
+    <!-- Страница работ -->
+    <div id="works" class="container">
+        <h1 class="title">Мои <span>работы</span></h1>
+        <p class="subtitle">Последние проекты, которые я создал</p>
+        
+        <nav>
+            <a href="#" class="nav-link" onclick="showPage('home')">Главная</a>
+            <a href="#" class="nav-link" onclick="showPage('works')">Работы</a>
+        </nav>
+        
+        <div class="works-grid">
+            <div class="work-card">
+                <img src="https://via.placeholder.com/600x400?text=Проект+1" alt="Проект 1" class="work-image">
+                <div class="work-info">
+                    <h3 class="work-title">Корпоративный сайт</h3>
+                    <p class="work-desc">Современный дизайн для IT компании</p>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <img src="https://via.placeholder.com/600x400?text=Проект+2" alt="Проект 2" class="work-image">
+                <div class="work-info">
+                    <h3 class="work-title">Мобильное приложение</h3>
+                    <p class="work-desc">UI/UX дизайн для iOS и Android</p>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <img src="https://via.placeholder.com/600x400?text=Проект+3" alt="Проект 3" class="work-image">
+                <div class="work-info">
+                    <h3 class="work-title">Лендинг страница</h3>
+                    <p class="work-desc">Промо-сайт для нового продукта</p>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <img src="https://via.placeholder.com/600x400?text=Проект+4" alt="Проект 4" class="work-image">
+                <div class="work-info">
+                    <h3 class="work-title">Брендбук</h3>
+                    <p class="work-desc">Фирменный стиль для кафе</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showPage(pageId) {
+            // Скрыть все страницы
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('works').style.display = 'none';
+            
+            // Показать выбранную страницу
+            document.getElementById(pageId).style.display = 'block';
+            
+            // Для главной страницы - центрирование контента
+            if(pageId === 'home') {
+                document.getElementById('home').style.display = 'flex';
+            }
+            
+            // Прокрутка вверх
+            window.scrollTo(0, 0);
+        }
+        
+        // По умолчанию показываем главную страницу
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('home');
+        });
+    </script>
 </body>
-
 </html>
