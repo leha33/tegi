@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Элегантный Сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Переключатель темы -->
+        <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Главный контент -->
+        <header class="centered-header">
+            <h1 class="title">Привет, я <span>Дизайнер</span></h1>
+            <p class="subtitle">Создаю элегантные цифровые продукты</p>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="centered-nav">
+            <a href="#about" class="nav-link hover-underline">Обо мне</a>
+            <a href="#work" class="nav-link hover-underline">Работы</a>
+            <a href="#contact" class="nav-link hover-underline">Контакты</a>
+        </nav>
+
+        <!-- Социальные иконки -->
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-behance"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
