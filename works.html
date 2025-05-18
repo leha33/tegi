@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои работы</title>
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #2d3436;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2rem;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* Навигация */
+        nav {
+            margin: 2rem 0;
+        }
+        
+        .nav-link {
+            color: #2d3436;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 0 1rem;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #6c5ce7;
+            transition: width 0.4s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Заголовки */
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 2rem 0;
+        }
+        
+        .title span {
+            color: #6c5ce7;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        /* Страница работ */
+        #works {
+            padding: 4rem 0;
+        }
+        
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .work-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .work-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .work-info {
+            padding: 1.5rem;
+        }
+        
+        .work-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .work-desc {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .works-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="works" class="container">
+        <h1 class="title">Мои <span>работы</span></h1>
+        <p class="subtitle">Последние проекты, которые я создал</p>
+        
+        <nav>
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="works.html" class="nav-link">Работы</a>
+        </nav>
+        
+        <div class="works-grid">
+            <div class="work-card">
+                <img src="https://via.placeholder.com/600x400?text=Проект+1" alt="Проект 1" class="work-image">
+                <div class="work-info">
+                    <h3 class="work-title">Корпоративный сайт</h3>
+                    <p class="work-desc">Современный дизайн для IT компании</p>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <img src="https://via.placeholder.com/600x400?text=Проект+2" alt="Проект 2" class="work-image">
+                <div class="work-info">
+                    <h3 class="work-title">Мобильное приложение</h3>
+                    <p class="work-desc">UI/UX дизайн для iOS и Android</p>
+                </div>
+            </div>
+            
+            <div class="work-card">
+                <img src="https://via.placeholder.com/600x400?text=Проект+3" alt="Проект 3" class="work-image">
+                <div class="work-info">
+                    <h3 class="work-title">Лендинг страница</h3>
+                    <p class="work-desc">Промо-сайт для нового продукта</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
